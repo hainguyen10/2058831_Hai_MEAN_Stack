@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="team_plan_budget.css" type="text/css"/>
+    <script src="storage_data.js"></script>
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <header><b>Finance Teams</b></header>
+    <div id="dvTable">
+        <h2>Anual Budget</h2>
+        <form action="/action_page.php">
+            <input type="button" value="Show" onclick="displayData()"/>
+            <input type="button" value="Back" onclick="goBack()"/>
+
+        </form>
+
+    </div>
+</body>
+</html>

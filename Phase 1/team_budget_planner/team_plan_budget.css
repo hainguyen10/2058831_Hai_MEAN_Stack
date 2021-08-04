@@ -1,0 +1,17 @@
+header{
+    color:indianred;
+    text-align: center;
+    font-size: 60px;
+}
+h2{color: coral;text-align: center;}
+div{
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: red; */
+    border:4px gold solid;
+    width: 1250px;
+    height: 500px;
+    display: inline-block;
+    padding: 30px;
+    margin: 50px;
+}

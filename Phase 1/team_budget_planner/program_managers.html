@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="team_plan_budget.css" type="text/css"/>
+    <script src="storage_data.js"></script>
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <header><b>Program Managers</b></header>
+    <div id="dvTable">
+        <h2>Add New Budget</h2>
+        <form action="/action_page.php">
+            Client Name :<input type="text" id="client"/><br/>
+            Project Name :<input type="text" id="project"/><br/>
+            Budget :<input type="text" id="budget"/><br/>
+            <input type="reset" value="Clear">
+            <input type="button" value="Add" onclick="storeData()"/>
+            <input type="button" value="Back" onclick="goBack()"/>
+            <input type="button" value="Show" onclick="displayData()"/>
+
+        </form>
+    </div>
+</body>
+</html>
