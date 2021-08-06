@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Simply_Blogging_styles.css" type="text/css"/>
+    <script src="Simply_Bloging_function.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">   
+</head>
+<body>
+    <header><b>Simply Blogging</b></header>
+    <div class="container">
+        <a href="Simply_Bloging_main.html"><b>Add Blog |</b></a>
+        <a href="Simply_Blogging_home.html"><b>Home |</b></a>
+        <a href="Simply_Blogging_aboutus.html"><b>AboutUs |</b></a>
+        <a href="Simply_Blogging_contacts.html"><b>Contacts</b></a>
+    </div>
+
+    <div class="container-fluid">
+        <form>
+            <div class="form-group">
+                <label for="textTitle">Title:</label>
+                <div class="col-6"><input type="text" class="form-control" id="titleInput"></div>
+            </div>
+            <div class="form-group">
+                <label for="textArticles">Articles:</label>
+                <div class="col-6"><input type="text" class="form-control" id="articlesInput"></div>
+            </div>
+            <div class="form-group">
+                <label for="textImageURL">Add Image:</label>
+                <div class="col-6"><input type="text" class="form-control" id="imageInput"></div>
+            </div>
+            <button type="button" class="btn btn-success" onclick="addBlog()">ADD BLOG</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row" id="containerID">
+        </div>  
+    </div>
+    
+    
+</body>
+</html>
