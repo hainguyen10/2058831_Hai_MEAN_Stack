@@ -12,17 +12,22 @@
           window.history.back();
         }
     </script>
+    <style>
+        .mydiv{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header><b>Finance Teams</b></header>
-    <div id="dvTable">
+    <div id="dvTable", class="mydiv">
         <h2>Anual Budget</h2>
         <form action="/action_page.php">
             <input type="button" value="Show" onclick="displayData()"/>
-            <input type="button" value="Back" onclick="goBack()"/>
-
         </form>
 
     </div>
+    <input type="button" value="Back" onclick="goBack()"/>
+
 </body>
 </html>
