@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Simply_Blogging_styles.css" type="text/css"/>
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+    </script>
 </head>
 <body>
     <header><b>Welcome to About Us Page</b></header>
+    <form action="/action_page.php">
+        <input type="button" value="Back" onclick="goBack()"/>
+    </form>
 </body>
 </html>
