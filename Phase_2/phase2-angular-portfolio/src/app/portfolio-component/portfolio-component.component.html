@@ -1,0 +1,31 @@
+<!-- <body onload="loadData"> -->
+<div>
+    <button type="button" value="Click Here" (click)='loadData()'>Show</button>
+    <div *ngIf = 'portfolioFormShow'>
+        <h2>My Portfolio Main Page</h2>
+        <h4>Welcome {{msg}}</h4>
+        Contact Name: <input type="text" #nameRef/><br/>
+        <br/>
+        Phone Number: <input type="text" #phoneRef/><br/>
+        <br/>
+        <input type="button" value="Save" (click)='addName(nameRef,phoneRef)'/><br/>
+        <br/>
+        <input type="button" value="Load Contact Details" (click) ='showPersonalInfoData()'/><br/>
+        <!-- <ul>
+            <li *ngFor = 'let emp of showPersonalRecord'>{{emp.personName}},{{emp.personPhoneNumb}}</li>
+        </ul> -->
+        <hr/>
+        <table border="1">
+            <tr>
+                <th><b>Name</b></th>
+                <th><b>Phone No.</b></th>
+            </tr>
+            <tr *ngFor = 'let emp of showPersonalRecord'>
+                <td>{{emp.personName}}</td>
+                <td>{{emp.personPhoneNumb}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- </body> -->
+

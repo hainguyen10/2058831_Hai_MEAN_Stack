@@ -1,0 +1,20 @@
+<!-- <body onload="loadLoginPage()"> -->
+<div>
+    <button type="button" value="Click Here" (click)='loadLoginPage()'>Show</button>
+    <div *ngIf = 'loginformShow'>
+        <h2>Login Form</h2>
+        <form [formGroup] ='loginRef' (ngSubmit)='checkUser()'>
+            <label>UserName:</label>
+            <input type="text" formControlName = 'user'/><br/>
+            <label>Password:</label>
+            <input type="password" formControlName = 'pass'/><br/>
+            <input type="submit" value="Submit" [disabled]="!loginRef.valid"/>
+            <input type="reset" value="Reset"/>
+            <br/>
+            <input type="button" value="Sign-Up" (click)='registerAccount()'/>
+        </form>
+        {{msg}}
+    </div>
+</div>
+
+<!-- </body> -->

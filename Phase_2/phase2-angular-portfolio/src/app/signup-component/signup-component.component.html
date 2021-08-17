@@ -1,0 +1,18 @@
+<div>
+    <button type="button" value="Click Here" (click)='loadPage()'>Show</button>
+    <div *ngIf = 'signUpFormShow'>
+        <h2>Registration Form</h2>
+        <form [formGroup] ='regisRef' (ngSubmit)='registerUser(fname,lname)'>
+            <label>First Name:</label>
+            <input type="text" #fname/><br/>
+            <label>Last Name:</label>
+            <input type="text" #lname/><br/>
+            <label>UserName:</label>
+            <input type="text" formControlName = 'user'/><br/>
+            <label>Password:</label>
+            <input type="password" formControlName = 'pass'/><br/>
+            <input type="submit" value="Register" [disabled]="!regisRef.valid"/>
+            <input type="reset" value="Reset"/>
+        </form>
+    </div>
+</div>
