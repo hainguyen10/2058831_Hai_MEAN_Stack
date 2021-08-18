@@ -1,0 +1,44 @@
+<mat-grid-list cols="2" rowHeight="680px">
+    <mat-grid-tile>
+        <form [formGroup]="addRef" (ngSubmit)="addTasks()">
+            <h4>To Do Task</h4>
+            <hr/>
+            <mat-label>ID:</mat-label>
+            <input type="text" class="form-control" formControlName="id"/><br/>
+            <br/>
+            <mat-label>Name:</mat-label>
+            <input type="text" class="form-control" formControlName="name"/><br/>
+            <br/>
+            <mat-label>Task:</mat-label>
+            <input type="text" class="form-control" formControlName="task"/><br/>
+            <br/>
+            <mat-label>Deadline:</mat-label>
+            <input type="text" class="form-control" formControlName="date"/><br/>
+            <br/>
+            <button type="submit" mat-raised-button color="primary">Submit</button>
+            <button type="reset" mat-raised-button style="background-color: bisque;">Reset</button>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div>
+            <h3>To Do List</h3>
+        <hr/>
+        <table border="2">
+            <tr>
+                <th>Emp ID</th>
+                <th>Name</th>
+                <th>Task</th>
+                <th>Deadline</th>
+            </tr>
+            <tr *ngFor ="let emptask of taskEmploy">
+                <td>{{emptask.id}}</td>
+                <td>{{emptask.name}}</td>
+                <td>{{emptask.task}}</td>
+                <td>{{emptask.date}}</td>
+            </tr>
+        </table>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+ 
