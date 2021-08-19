@@ -1,0 +1,18 @@
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="checkWorkButton()">
+        <div *ngFor="let q of allQuestion">
+            <p>Question: {{q.question}}</p>
+        <input type="radio" formControlName={{q.question}} value={{q.answer1}}/>  A. {{q.answer1}}<br/>
+        <input type="radio" formControlName={{q.question}} value={{q.answer2}}/>  B. {{q.answer2}}<br/>
+        <input type="radio" formControlName={{q.question}} value={{q.answer3}}/>  C. {{q.answer3}}<br/>
+        <input type="radio" formControlName={{q.question}} value={{q.answer4}}/>  D. {{q.answer4}}<br/>
+        <br/>
+        </div>
+        <input type="submit" class="form-control" style='color:white; font-weight: bolder; background-color: turquoise;' value="SUBMIT"/>
+    </form>
+    <hr/>
+    <p style="color: red;font-weight: bolder;">Result: {{resultmsg}}</p>
+    <div *ngFor="let resul of correctmsg">
+        {{resul}}<br/>
+    </div>
+</div>
