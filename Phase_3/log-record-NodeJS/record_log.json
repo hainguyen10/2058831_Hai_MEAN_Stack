@@ -1,0 +1,8 @@
+[{"Emp_ID":100,"Firstname":"Ajay",
+    "Lastname":"Ramesh","Gender":"F",
+    "Salary":120000,"Emp_Email":"ajay@gmail.com",
+    "DateStored":"2021-08-24T18:47:13.571Z"},
+{"Emp_ID":101,"Firstname":"Raul",
+    "Lastname":"Gonzales","Gender":"M",
+    "Salary":200000,"Emp_Email":"raul@gmail.com",
+    "DateStored":"2021-08-24T18:48:32.112Z"}]
