@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Connecting library file part of node module folder-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+        usermessageProcessor = ()=>{
+            var socket = io();
+            let nameOfUser = document.getElementById("username").value;
+            socket.emit("userName",nameOfUser);
+            document.getElementById("username").value="";
+            let messageFromUser = document.getElementById("texbox").value;
+            socket.emit("userMsg",messageFromUser);
+            document.getElementById("texbox").value="";
+            socket.on("browserpromt",(usermsg)=>{
+                document.getElementById("msgPrompt").innerHTML = usermsg;
+            })
+        }
+    </script>
+</head>
+<body>
+    <h3 style="text-align: center;">Chat Log</h3>
+    <label>Name:</label>
+    <input type="text" id= "username" formControlName="name"/><br/><br/>
+    <label>Message: </label>
+    <textarea id="texbox" name="textreview" rows="4" cols="50"></textarea><br/>
+    <hr/>
+    <input type="button" value="Send" onclick="usermessageProcessor()"/>
+    <p id="msgPrompt" style="color: red;"></p>
+</body>
+</html>
